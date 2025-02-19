@@ -25,20 +25,20 @@ BEGIN
         DROP DATABASE datawarehouse;
     END IF;
 END $$;
-GO 
+
 
 -- Create the Database 'Datawarehouse'
 CREATE DATABASE DataWarehouse;
-GO 
+
   
 -- Create Schemas  
 CREATE SCHEMA bronze;
-GO
+
   
 CREATE SCHEMA silver;
-GO 
+
 
 CREATE SCHEMA gold;
-GO
+
 
 
