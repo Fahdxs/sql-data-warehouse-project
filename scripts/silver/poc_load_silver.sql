@@ -206,9 +206,9 @@ AS $$
 		batch_end_time := NOW();
 		RAISE NOTICE 'Batch Load Duration : % SECONDS', EXTRACT(EPOCH FROM (batch_end_time - batch_start_time));
 	EXCEPTION
-    WHEN OTHERS THEN
-        RAISE NOTICE 'Error Message: %', SQLERRM;
-        RAISE NOTICE 'Error Code: %', SQLSTATE; 
+	    WHEN OTHERS THEN
+	        RAISE NOTICE 'Error Message: %', SQLERRM;
+	        RAISE NOTICE 'Error Code: %', SQLSTATE; 
 END $$;
 
 CALL silver.load_silver()
